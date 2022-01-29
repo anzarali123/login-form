@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --valid-color:#4ade80;
+    --invalid-color: red;
+    --button-background:#06b6d4;
+}
+body {
+    font-family: "Helvetica";
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 500px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    padding: 30px 40px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom:50px;
+    font-family: 'Mulish', sans-serif;
+}
+
+.form-control {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 16px;
+}
+input {
+font-size: 16px;
+margin-bottom: 5px;
+width: 100%;
+padding: 10px 10px;
+border: 2px solid #777;
+border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+.password-error {
+    visibility: hidden;
+}
+
+.submit {
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    background-color: var(--button-background);
+    cursor: pointer;
+}
+.submit:active {
+    transform: scale(0.98);
+}
+
+input.valid + small{
+    visibility: hidden;
+}
+input.invalid  +small{
+    color: var(--invalid-color);
+}
+ input.valid{
+    border: 2px solid var(--valid-color);
+}
+ input.invalid{
+    border: 2px solid var(--invalid-color);
+}
+
+.errormsg {
+    margin: 10px 0;
+    display: none;
+    text-align: center;
+    background-color: var(--invalid-color);
+    color: white;
+    padding: 5px;
+}
+.successmsg {
+    margin: 10px 0;
+    display: none;
+    text-align: center;
+    background-color: var(--valid-color);
+    color: white;
+    padding: 5px;
+}
+
+
+@media(max-width:570px) {
+    .container{
+        width: 300px;
+    }
+    .title{
+        font-size: 25px;
+    }
+}

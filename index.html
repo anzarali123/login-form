@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ------------------form container------------------------- -->
+    <div class="container">
+        <h1 class="title">Register With Us</h1>
+        <p class="errormsg">Fill in all the fields</p>
+        <p class="successmsg">You are successfully registered</p>
+        <form  id="form" class="form">
+
+            <!-- ------------------username------------------- -->
+            <div class="form-control">
+                <label  for="username">Username</label>
+                <input name="username" type="text" id="username" placeholder="Enter Username">
+                <small>Username must be alphanumeric and contain 5-12 characters</small>
+            </div>
+
+            <!-- ------------------email------------------------- -->
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input name="email" type="text" id="email" placeholder="Enter Email">
+                <small>Email must be a valid address e.g. me@mydomain.com</small>
+            </div>
+
+            <!-- ----------------------password------------------------- -->
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input name="password" type="password" id="password" placeholder="Enter Password">
+                <small>Password must be alphanumeric (@._and - are also allowed)and be 8 - 20 characters</small>
+            </div>
+
+            <!-- --------------confirm password--------------------------- -->
+            <div class="form-control">
+                <label for="password-match">Confirm Password</label>
+                <input  disabled name="password-match" type="password" id="password-match" placeholder="Enter Password Again">
+                <small class="password-error">Password do not match</small>
+            </div>
+
+            <!-- -------------submit button--------------------- -->
+            <button class="submit">Submit</button>
+        </form>
+    </div>
+    <!-- ---------------XXXXX-------form container --------xxxx  -->
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
